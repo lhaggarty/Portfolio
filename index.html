@@ -19,6 +19,7 @@
  <link href="./Leon Haggarty - Portfolio_files/css(4)" rel="stylesheet" type="text/css">
    <script src="./Leon Haggarty - Portfolio_files/jquery.min.js"></script>
 <script src="./Leon Haggarty - Portfolio_files/jquery.lettering-0.6.1.min.js"></script>
+<script src="carouselSupport.js"></script>
 <script type="">
   $(document).ready(function() {
     $("#nameTitle").lettering();
@@ -46,15 +47,36 @@
   </head>
   <body hola-ext-player="1">
     <div class="container-fluid">
-      <div class="row">
+      <input id="carouselRequestSelection" style="display:none"/>
 
+
+      <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <p class="modal-title" style="visibility:hidden">Modal title</p>
+            </div>
+            <div id="innerModal" class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+
+      <div class="row">
 
          <div class="col-md-12" id="wrapper">
 
            <div id="logoUnit">
 
               <h1 id="nameTitle">LEON</h1>
-              <h3 id="nameTitle">HAGGARTY</h3>
+              <h3 id="nameTitle" style="font-size:235%">HAGGARTY</h3>
 
               <img src="./Leon Haggarty - Portfolio_files/gembreakred.png" alt="#">
 
@@ -88,7 +110,7 @@
 
               <div id="bioInfo">
 
-                  <h2 class="bioheadline2"> Leon Haggarty </h2>
+                  <!-- <h2 class="bioheadline2"> Leon Haggarty </h2> -->
 
 
                   <img src="./Leon Haggarty - Portfolio_files/hexagonline.png" id="imgLine" alt="#">
@@ -106,95 +128,94 @@
   </div>
 
   <div class="col-md-12">
-    <div class="col-md-5" id="bioText1">
-
-      <h2 class="bioheadline" style="padding-top: 3px;">EDUCATION</h2>
-      <ul class="infoList">
-        <br></br>
-        <li>
-			    <p class="title-case-up-size">Master of Digital Media</p>
-			    <p>Ryerson University</p>
-        </li>
-<br></br>
-        <li>
-          <p class="title-case-up-size">Bachelor of Applied Management</p>
-			    <p>University Of New Brunswick</p>
-        </li>
-        <br></br>
-			<li>
-				  <p class="title-case-up-size">Film Diploma</p>
-				  <p>Confederation College</p>
-			</li>
-      <br></br>
-      </ul>
-    </div>
+    <div class="col-md-5" id="bioSkills">
 
 
-    <div class="col-md-5 col-md-offset-2">
 
-      <div id="bioSkills">
+        <h2 class="bioheadline" style="padding-top: 3px;"> SKILLS </h2>
 
+        <ul class="skillsList">
+          <li>
+      <p class="title-case-up-size">Front-end</p>
+            <span style="padding-left:20px">HTML & CSS</span>
+            <span style="padding-left:20px">Javascript & jQuery</span>
+      <span style="padding-left:20px">Less & Sass</span>
 
-          <h2 class="bioheadline" style="padding-top: 3px;"> SKILLS </h2>
-
-          <ul class="skillsList">
-            <li>
-				<p class="title-case-up-size">Front-end</p>
-              <span style="padding-left:20px">HTML & CSS</span>
-              <span style="padding-left:20px">Javascript & jQuery</span>
-			  <span style="padding-left:20px">Less & Sass</span>
-
-        <p>React.js</p>
-            </li>
-          <br>
-			<li>
-            <p class="title-case-up-size">Back-End</p>
-			<span style="padding-left:20px">PHP</span>
-			<span style="padding-left:20px">Ruby</span>
-			<span style="padding-left:20px">JSON</span>
+      <p>React.js</p>
+          </li>
+        <br>
+    <li>
+          <p class="title-case-up-size">Back-End</p>
+    <span style="padding-left:20px">PHP</span>
+    <span style="padding-left:20px">Ruby</span>
+    <span style="padding-left:20px">JSON</span>
+    <p>
+    <span style="padding-left:20px">Laravel</span>
+    <span style="padding-left:20px">Rails</span>
+    <span style="padding-left:20px">AJAX</span></p>
+    </li>
+  </br>
+      <li>
+            <p class="title-case-up-size">Frameworks</p>
+       <span style="padding-left:20px">Bootstrap</span>
+       <span style="padding-left:20px">RESTful APIs</span>
+       <span style="padding-left:20px">MVC</span>
+       <span style="padding-left:20px">Git, SQL, OAuth</span>
+      </li>
+    <br>
+      <li>
+      <p class="title-case-up-size">User Experience</p>
+      <span style="padding-left:20px">Responsive Design</span>
+      <span style="padding-left:20px">User Flow</span>
+      <span style="padding-left:20px">Mockups</span>
+      </li>
+        </br>
+          <li>
+    <p class="title-case-up-size">Site Staging & Sandboxing</p>
+          <span style="padding-left:20px">Adobe CS</span>
+    <span style="padding-left:20px">GitHub</span>
+    <span style="padding-left:20px">FTPs</span>
+    </li>
+    <br>
+          <li>
+    <p class="title-case-up-size">Processes</p>
+            <span style="padding-left:20px">Lean Methodology</span>
+      <span style="padding-left:20px">Unit & Acceptance Testing</span>
+      <!-- <span style="padding-left:20px">Ideation</span> -->
       <p>
-      <span style="padding-left:20px">Laravel</span>
-			<span style="padding-left:20px">Rails</span>
-			<span style="padding-left:20px">AJAX</span></p>
-			</li>
-    </br>
-        <li>
-              <p class="title-case-up-size">Frameworks</p>
-			   <span style="padding-left:20px">Bootstrap</span>
-			   <span style="padding-left:20px">RESTful APIs</span>
-			   <span style="padding-left:20px">MVC</span>
-			   <span style="padding-left:20px">Git, MySQL, MongoDB</span>
-        </li>
-      <br>
-        <li>
-			  <p class="title-case-up-size">User Experience</p>
-			  <span style="padding-left:20px">Responsive Design</span>
-			  <span style="padding-left:20px">User Flow</span>
-			  <span style="padding-left:20px">Mockups</span>
-        </li>
-          </br>
-            <li>
-			<p class="title-case-up-size">Site Staging & Sandboxing</p>
-            <span style="padding-left:20px">Adobe CS</span>
-			<span style="padding-left:20px">GitHub</span>
-			<span style="padding-left:20px">FTPs</span>
-			</li>
-      <br>
-            <li>
-			<p class="title-case-up-size">Processes</p>
-              <span style="padding-left:20px">Lean Methodology</span>
-			  <span style="padding-left:20px">Customer Validation</span>
-			  <span style="padding-left:20px">Ideation</span>
-        <p>
-              <span style="padding-left:20px">Rapid Prototyping</span>
-			  <span style="padding-left:20px">A/B Testing</span></p>
-            </li>
+            <span style="padding-left:20px">Rapid Prototyping</span>
+      <span style="padding-left:20px">A/B Testing</span></p>
+          </li>
 
 </ul>
 
-  </div>
+</div>
 
-  </div>
+    <div class="col-md-5 col-md-offset-2" id="bioText1">
+
+
+        <h2 class="bioheadline" style="padding-top: 3px;">EDUCATION</h2>
+        <ul class="infoList">
+          <br></br>
+          <li>
+  			    <p class="title-case-up-size">Master of Digital Media</p>
+  			    <p>Ryerson University</p>
+          </li>
+  <br></br>
+          <li>
+            <p class="title-case-up-size">Bachelor of Applied Management</p>
+  			    <p>University Of New Brunswick</p>
+          </li>
+          <br></br>
+  			<li>
+  				  <p class="title-case-up-size">Film Diploma</p>
+  				  <p>Confederation College</p>
+  			</li>
+        <br></br>
+        </ul>
+      </div>
+
+
 </div>
   <div class="col-md-12" id="workSection" style="padding-bottom:0px">
 
@@ -261,7 +282,7 @@
 
 <div class="col-md-12 projectSection" id="demhubSection">
 
-    <div class="col-md-5">
+    <div class="col-md-5" onclick="launchPopUp('demhub')" data-toggle="modal" data-target="#myModal">
       <img class="img-responsive" src="./Leon Haggarty - Portfolio_files/demhub_homepage.jpg" style="padding:10px;padding-top:0px" alt="#">
       <img class="img-responsive" src="./Leon Haggarty - Portfolio_files/demhub_connections.png" style="padding:10px" alt="#">
       <img class="img-responsive" src="./Leon Haggarty - Portfolio_files/demhub_profile.png" style="padding:10px" alt="#">
@@ -270,7 +291,10 @@
 
 
     <div class="col-md-7 projectText berstBlock">
-       <h1 class="catTitleBerst"> DEMHUB <img src="./Leon Haggarty - Portfolio_files/linebreak.png" id="imgLine" alt="#"></h1>
+
+      <h1 class="catTitleBerst"><a onclick="launchPopUp('demhub')" data-toggle="modal" data-target="#myModal" style="color:#38a7de"> DEMHUB </a>
+           <img src="./Leon Haggarty - Portfolio_files/linebreak.png" id="imgLine" alt="#">
+      </h1>
 
       <h3> ROLE</h3>
       <p style="font-size: 115%"> Full-Stack Developer</p>
@@ -286,7 +310,7 @@
        The back-end of the application consisted of PHP, Laravel MVC framework, and MySQL.
        On the front-end I worked with javascript, css, jQuery, React.js, React native, JSON, and AJAX.
        We also used composer, Git, artisan, and New Relic as part of our development stack.
-       <a href="http://demhub.net">demhub.net</a>
+
      </p>
 </div>
 
@@ -294,7 +318,10 @@
 <div class="col-md-12 projectSection" id="hotpotatoSection">
 
 <div class="col-md-7 projectText rdmrBlock">
-  <h1 class="catTitleBerst"> HOT POTATO <img src="./Leon Haggarty - Portfolio_files/linebreak.png" id="imgLine" alt="#"></h1>
+
+    <h1 class="catTitleBerst">
+        <a onclick="launchPopUp('hotpotato')" data-toggle="modal" data-target="#myModal" style="color:#38a7de"> HOT POTATO </a>
+    <img src="./Leon Haggarty - Portfolio_files/linebreak.png" id="imgLine" alt="#"></h1>
 
  <h3> ROLE</h3>
  <p style="font-size: 115%"> Lead Developer</p>
@@ -303,26 +330,25 @@
 
   Share memorable moments within a video using Hot Potato.
   A user can select, edit and share video content in a user-friendly, no-frills interface.
-  The MVP of Hot Potato was done as a solo developer.  Later Iterations were done alongside two other developers.
+  The MVP of Hot Potato was done as a solo developer.  Later iterations were done alongside two other developers.
 
 </p><p style="font-size: 115%">
-   Hot Potato began as a web application.  Later interations spun off an browser plugin, IOS, and Android mobile app.
-   I served as both a developer and a project manager.  Setting and enacting developement sprints.  Jumpiing between task management and development.
+   Hot Potato began as a web application.  A mobile app was also created.
+   I served as both a developer and a project manager.  Setting and enacting development sprints.  Jumping between task management and development.
 
 </p><p style="font-size: 115%">
    The site relied most on the JW video player, jQuery, PHP, React.js, and MySQL.
    The site created the illusion of video edits by manupliation the source video.
    Hot Potato users edit on our platform, and share the links via social media.
-  <a href="http://www.hotpotato.me">hotpotato.me</a>
+
 </p>
 
 </div>
-    <div class="col-md-5">
+    <div class="col-md-5" onclick="launchPopUp('demhub')" data-toggle="modal" data-target="#myModal">
 
       <img class="img-responsive" src="./Leon Haggarty - Portfolio_files/hotpotato_homepage.jpg" style="padding:10px;padding-top:0px" alt="#">
       <img class="img-responsive" src="./Leon Haggarty - Portfolio_files/hotpotato_edit.jpg" style="padding:10px;" alt="#">
       <img class="img-responsive" src="./Leon Haggarty - Portfolio_files/hotpotato_sharecast.jpg" style="padding:10px;" alt="#">
-
 
     </div>
 
@@ -345,7 +371,10 @@
 
 
     <div class="col-md-7 projectText arduinoBlock">
-    <h1 class="catTitleBerst"> WORLD FISHING NETWORK <img src="./Leon Haggarty - Portfolio_files/linebreak.png" id="imgLine" alt="#"></h1>
+
+    <h1 class="catTitleBerst">
+        <a href="http://worldfishingnetwork.com" style="color:#38a7de"> WORLD FISHING NETWORK </a>
+    <img src="./Leon Haggarty - Portfolio_files/linebreak.png" id="imgLine" alt="#"></h1>
 
      <h3> ROLE</h3>
      <p style="font-size: 115%"> Digital Media Coordinator</p>
@@ -354,18 +383,21 @@
     WFN is a North American fishing television channel.  I worked in the digital & web department.
     My department was responsible for web content, running the website, channel schedule, as well as publishing digital assets.
     </p><p style="font-size: 115%">
-    Programming and copywriting were involved with the work done.  Webpages were built in Wordpress, the site's sandbox, or in Drupal.  Webpages ranged from official show pages, press releases, news, conservation and marketing content.
+    Programming and copywriting were involved with the work done.  The site was originally built in Wordpress, but we moved to Ruby on Rails.  Webpages ranged from official show pages, press releases, news, conservation and marketing content.
     </p><p style="font-size: 115%">
     The TV schedule database, media content management system (Ooyala Backlot), SEO optimizing, and web analytics were all duties undertaken.  Monthly digital content reports, communicating with the show producers, and fulfilling the marketing team's mandate were other tasks performed.
-    <a href="http://worldfishingnetwork.com">worldfishingnetwork.com</a>
+
     </p>
 </div>
 
      </div>
      <div class="col-md-12 projectSection" id="thebaronSection">
     <div class="col-md-7 projectText mrpBlock">
-      <h1 class="catTitleBerst"> THE BARON NEWSPAPER <img src="./Leon Haggarty - Portfolio_files/linebreak.png" id="imgLine" alt="#"></h1>
 
+        <h1 class="catTitleBerst">
+            <a href="http://www.thebaron.ca" style="color:#38a7de"> THE BARON NEWSPAPER</a>
+        <img src="./Leon Haggarty - Portfolio_files/linebreak.png" id="imgLine" alt="#"></h1>
+        </a>
        <h3> ROLE</h3>
        <p style="font-size: 115%"> Webmaster & Online Editor</p>
        <h3> DESCRIPTION</h3>
@@ -381,10 +413,10 @@
         Finally multi media compression and distribution were vital to the speed and sucess of the news website.
       </p><p style="font-size: 115%">
       I ultilized HTML, CSS, Javascript, RSS, XML, and JSON in this role.  I also coordinated the newspaper's content releases for online mediums
-      <a href="http://www.thebaron.ca">thebaron.ca</a>
+
       </p>
 </div>
-<div class="col-md-5 projectImg1">
+<div class="col-md-5">
 
 
   <img class="img-responsive" src="./Leon Haggarty - Portfolio_files/baron_homepage.jpg" style="padding:10px;padding-top:0px" alt="#">
@@ -399,7 +431,7 @@
 <div class="col-md-12 projectSection" id="emailSection">
     <div class="col-md-6 col-md-offset-3 projectText emailBlock">
       <h1 class="catTitleBerst"> DON'T FORGET TO EMAIL<img src="./Leon Haggarty - Portfolio_files/linebreak.png" alt="#" id="imgLine"></h1>
-      <h3> <a href="mailto:leonhaggarty@gmail.com">leonhaggarty@gmail.com</a></h3>
+      <h3> <a href="mailto:leonhaggarty@gmail.com" style="color:#38a7de">leonhaggarty@gmail.com</a></h3>
 </div>
 
 
@@ -430,5 +462,6 @@
 
 
 </script>
+
 
 </div></body></html>
