@@ -7164,11 +7164,22 @@ margin-bottom: 20px;
 box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,0.37);
 }
 #overdrive {
-
   background-image: url('carousel/overdrive-0.png');
    background-size: 107%;
    background-position: center center;
 
+  height: 400px;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+-webkit-box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,0.37);
+-moz-box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,0.37);
+box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,0.37);
+}
+#ssl_group {
+  background-image: url('carousel/ssl_group-0.png');
+   background-size: 107%;
+   background-position: center center;
   height: 400px;
   padding-left: 0;
   padding-right: 0;

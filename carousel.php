@@ -8,6 +8,9 @@ elseif($_GET['selection']=='hotpotato'){
 elseif($_GET['selection']=='overdrive'){
     getOverdriveCarousel();
 }
+elseif($_GET['selection']=='ssl_group'){
+    getSSLgroupCarousel();
+}
 function imageGallery($amount, $name){
   $html = '
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -65,10 +68,16 @@ die();
 }
 function getOverdriveCarousel(){
 echo '
-<a href="http://demhub.net" style="color:#38a7de" target="_blank">
-  <h5 style="text-align:center">Overdrive Automotive</h5>
+<a href="http://overdriveauto.com" style="color:#38a7de" target="_blank">
+  <h5 style="text-align:center">OVERDRIVE AUTOMOTIVE</h5>
 </a>'.imageGallery(18,'overdrive');
 die();
 }
-
+function getSSLgroupCarousel(){
+echo '
+<a href="http://sslgroup.ca" style="color:#38a7de" target="_blank">
+  <h5 style="text-align:center">SSL Group</h5>
+</a>'.imageGallery(13,'ssl_group');
+die();
+}
 ?>
