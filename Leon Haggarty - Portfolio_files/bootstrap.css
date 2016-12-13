@@ -46,6 +46,7 @@ template {
 a {
   background-color: transparent;
 }
+
 a:active,
 a:hover {
   outline: 0;
@@ -1303,6 +1304,14 @@ p {
 @media (min-width: 768px) {
   .lead {
     font-size: 21px;
+  }
+  .noMarginLeft {
+    margin-left:-10px !important;
+  }
+  .modal-content {
+    margin-left: -20%;
+    min-width:800px;
+    min-height: 600px;
   }
 }
 small,
@@ -6581,7 +6590,7 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
+
 
 
 #wrapper {
@@ -6642,10 +6651,10 @@ font-family: 'Oswald', sans-serif;
       letter-spacing: 10px;
 }
 #nameTitle .char1 {
-  margin-right: -7px;
+  margin-right: -4px;
 }
 #nameTitle .char2 {
-  margin-right: -6px;
+  margin-right: -8px;
 }
 #nameTitle .char3 {
   margin-right: -4px;
@@ -6676,12 +6685,8 @@ font-family: 'Oswald', sans-serif;
   margin-right: -2px;
 }
 
-.catTitleWork .char2 {
-  margin-right: -7px;
-}
-
-.catTitleWork .char3 {
-  margin-right: -3px;
+.catTitleWork .char4 {
+  margin-left: 5px;
 }
 
 #logoUnit ul{
@@ -7149,6 +7154,20 @@ margin-bottom: 20px;
 
   background-image: url('wfn-homepage.png');
    background-size: cover;
+
+  height: 400px;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+-webkit-box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,0.37);
+-moz-box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,0.37);
+box-shadow: inset 0px 0px 6px 3px rgba(0,0,0,0.37);
+}
+#overdrive {
+
+  background-image: url('carousel/overdrive-0.png');
+   background-size: 107%;
+   background-position: center center;
 
   height: 400px;
   padding-left: 0;

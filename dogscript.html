@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+//I’m not sure if this javascript is in a .js file, so I’ve included the script tag
+function dog (name, breed, age, height, weight, friendly){
+  this.legs = 4;
+  this.name=name;
+  this.breed = breed;
+  this.age = age;
+// height is in cm
+  this.height = height;
+// weight is in kg
+  this.weight = weight;
+  this.friendly = friendly;
+}
+var fido = new dog("fido", "German Shepherd", 3, 58, 30 , true);
+
+alert(fido.name+" has "+fido.legs+" legs");
+console.log(fido);
+
+</script>
+<p id="dogData"></p>
+</body>
+</html>
