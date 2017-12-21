@@ -25,4 +25,35 @@ $( document ).ready(function() {
       // $("#editCounterElement").attr('data-hover', xhttp.responseText);
 
   };
+  $('button[data-dismiss="modal"]').click(function(){
+    $('#myModal').removeClass('in');
+  });
+
+  $('a[href*="#"]:not(.back-to-top)').on("click touchstart", function(t) {
+            var n = $(this).attr("href");
+            if (n.length > 2) {
+                var i = $(n);
+                //i = $(i).parent();
+                if ($(window).width() < 576) {
+                    t.preventDefault();
+                    var o = 0;
+                    setTimeout(function() {
+                        $("html, body").animate({
+                            scrollTop: 1 * $(i).offset().top + o
+                        }, 500)
+                    });
+                } else {
+                    t.preventDefault();
+                    var o = 0;
+                    setTimeout(function() {
+                        $("html, body").animate({
+                            scrollTop: 1 * $(i).offset().top + o
+                        }, 500)
+                    });
+            }
+          }
+            else {
+            t.preventDefault();
+            }
+          });
 });

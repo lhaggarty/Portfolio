@@ -1,15 +1,18 @@
 <?php
 if($_GET['selection']=='demhub'){
-    getDemhubCarousel();
+    getCarousel('#', 'demhub', 'DEMHUB', 22);
 }
 elseif($_GET['selection']=='hotpotato'){
-    getHpCarousel();
+    getCarousel('#', 'hotpotato', 'Hot Potato', 20);
 }
 elseif($_GET['selection']=='overdrive'){
-    getOverdriveCarousel();
+    getCarousel('#', 'overdrive', 'Overdrive', 18);
 }
 elseif($_GET['selection']=='ssl_group'){
-    getSSLgroupCarousel();
+    getCarousel('#', 'ssl_group', 'SSL Group', 13);
+}
+elseif($_GET['selection']=='rcdesign'){
+    getCarousel('#', 'rcdesign', 'RC Design', 19);
 }
 function imageGallery($amount, $name){
   $html = '
@@ -51,33 +54,13 @@ function imageGallery($amount, $name){
   return $html;
 }
 
-function getHpCarousel(){
+function getCarousel( $link, $source, $title, $amount ){
   echo '
-  <a href="http://hotpotato.me" style="color:#38a7de" target="_blank">
-    <h5 style="text-align:center">HOT POTATO</h5>
+  <a href="'.$link.'" style="color:#38a7de" target="_blank">
+    <h5 style="text-align:center">'.$title.'</h5>
   </a>
-    '.imageGallery(26,'hotpotato');
+    '.imageGallery($amount, $source);
     die();
 }
-function getDemhubCarousel(){
-echo '
-<a href="http://demhub.net" style="color:#38a7de" target="_blank">
-  <h5 style="text-align:center">DEMHUB</h5>
-</a>'.imageGallery(41,'demhub');
-die();
-}
-function getOverdriveCarousel(){
-echo '
-<a href="http://overdriveauto.com" style="color:#38a7de" target="_blank">
-  <h5 style="text-align:center">OVERDRIVE AUTOMOTIVE</h5>
-</a>'.imageGallery(18,'overdrive');
-die();
-}
-function getSSLgroupCarousel(){
-echo '
-<a href="http://sslgroup.ca" style="color:#38a7de" target="_blank">
-  <h5 style="text-align:center">SSL Group</h5>
-</a>'.imageGallery(13,'ssl_group');
-die();
-}
+
 ?>
