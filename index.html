@@ -91,11 +91,11 @@
 
 						<li class="menuItem">
 
-							<a href="/web-dev" target="_blank">FULL&nbsp;STACK</a>
+							<a href="/web-dev.html" target="_blank">FULL&nbsp;STACK</a>
 						</li>
 						<li class="menuItem">
 
-							<a href="/js-framework-dev" target="_blank">FRONTEND&nbsp;JS</a>
+							<a href="/js-framework-dev.html" target="_blank">FRONTEND&nbsp;JS</a>
 						</li>
 					</ul>
 
@@ -342,6 +342,20 @@
 			</div></a>
 
 		</div> -->
+		<!-- <style>
+		@media (max-width: 575px) {
+			.catTitleBerst a {
+				pointer-events: none;
+			}
+		}
+		</style> -->
+		<script>
+		$(document).ready(function () {
+			if ( $(window).width() > 576 ) {
+				$('.catTitleBerst a').attr('onclick', '');	
+			}
+		});
+		</script>
 		<div class="row" id="berstSectionBG">
 
 			<div class="col-md-12" id="gradWrap">
