@@ -14,6 +14,9 @@ elseif($_GET['selection']=='ssl_group'){
 elseif($_GET['selection']=='rcdesign'){
     getCarousel('#', 'rcdesign', 'RC Design', 19);
 }
+elseif($_GET['selection']=='giftagram'){
+    getCarousel('#', 'giftagram', 'GIFTAGRAM', 20);
+}
 function imageGallery($amount, $name){
   $html = '
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">

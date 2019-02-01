@@ -1,30 +1,47 @@
-function launchPopUp (selection){
-  document.getElementById("innerModal").innerHTML= "";
-  $('#carouselRequestSelection').html(selection);
-  xhttp.open("GET", "carousel.php?selection="+selection, true);
-	xhttp.send();
+
+//var xhttp;
+if (window.XMLHttpRequest) {
+    xhttp = new XMLHttpRequest();
+} else {
+    // code for IE6, IE5
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
 }
+// xhttp.open("GET", "./Leon Haggarty - Portfolio_files/carousel/carousel.php", true);
+// xhttp.send();
+xhttp.onreadystatechange = function () {
+    //console.log(xhttp);
+    if (this.readyState == 4 && this.status == 200) {
+        console.log(xhttp.responseText);
+        document.getElementById("innerModal").innerHTML = xhttp.responseText;
+    }
+    // $('#myModal').show();
+    // $("#editCounterElement").attr('data-hover', xhttp.responseText);
+}
+
+function launchPopUp(selection){
+    console.log(selection);
+    if ( document.getElementById("innerModal") !== null ) {
+        document.getElementById("innerModal").innerHTML = "";
+    }
+    if ( document.getElementById("carouselRequestSelection") !== null ) {
+        document.getElementById('carouselRequestSelection').innerHTML = selection;
+    }
+    xhttp.open("GET", "https://squireproductions.000webhostapp.com/leonhaggarty/portfolio/carousel.php?selection="+selection, true);
+    xhttp.send();
+}
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    console.log('DOMContentLoaded');
+});
+
+
 // $('#myModal').on('shown.bs.modal', function () {
 //   $('#myInput').focus()
 // })
 
-var xhttp;
+
 $( document ).ready(function() {
-  if (window.XMLHttpRequest) {
-    xhttp = new XMLHttpRequest();
-  } else {
-    // code for IE6, IE5
-    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  // xhttp.open("GET", "./Leon Haggarty - Portfolio_files/carousel/carousel.php", true);
-  // xhttp.send();
-  xhttp.onreadystatechange = function() {
 
-      document.getElementById("innerModal").innerHTML = xhttp.responseText;
-      // $('#myModal').show();
-      // $("#editCounterElement").attr('data-hover', xhttp.responseText);
-
-  };
   $('button[data-dismiss="modal"]').click(function(){
     $('#myModal').removeClass('in');
   });
